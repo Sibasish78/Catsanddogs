@@ -1,0 +1,19 @@
+for _ in range(int(input())):
+    arr = list(map(int, input().split( ))) 
+    c = arr[0]
+    d = arr[1]
+    l = arr[2]
+    mx_legs = (c+d)*4
+    if(c>2*d):
+        a = c-2*d
+        min_legs = d*4 + a*4
+        if(l in range(min_legs, mx_legs+1) and l%4==0):
+            print('yes')
+        else:
+            print('no')
+    elif(c<=2*d):
+        min_legs = d*4
+        if(l in range(min_legs, mx_legs+1) and l%4==0):
+            print('yes')
+        else:
+            print('no')
